@@ -1,0 +1,47 @@
+body {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.holographic-text {
+    font-size: 203em;
+    font-weight: bold;
+    background: linear-gradient(45deg, #ff6ec4, #7873f5, #06bcfb, #48c6ef, #9b7bee, #fd43ff);
+    background-size: 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: holographic 5s infinite;
+}
+
+@keyframes holographic {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.countdown-container {
+    margin-top: 20px;
+}
+
+.text-container {
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+}
+
+#snvr {
+    font-size: 205em;
+}
