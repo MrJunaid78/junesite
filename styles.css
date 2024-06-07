@@ -1,0 +1,90 @@
+@font-face {
+    font-family: 'Kingthings Spikeless';
+    src: url('KingthingsSpikeless.ttf') format('truetype');
+}
+
+body {
+    background: linear-gradient(135deg, #4acfd9, #e289f2, #7055f5);
+    font-family: Arial, sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    margin-top: 20vh;
+}
+
+.holographic-text {
+    font-family: 'Kingthings Spikeless', sans-serif;
+    font-size: 10vw;
+    background: linear-gradient(45deg, #4acfd9, #e289f2, #7055f5);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: holographic 5s infinite;
+}
+
+@keyframes holographic {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.text-container {
+    text-align: center;
+    margin-top: 10vh; /* Adjusted margin */
+}
+
+.email-container {
+    margin-bottom: 10vh; /* Adjusted margin */
+    text-align: center;
+}
+
+#email-form {
+    display: flex;
+    align-items: center;
+}
+
+#email {
+    padding: 10px;
+    margin-right: 10px;
+    border: 2px solid white;
+    border-radius: 0;
+    font-size: 1.5rem;
+    background: transparent;
+    color: white;
+}
+
+#submit-button {
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+#submit-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+footer {
+    text-align: center;
+    font-size: 1rem;
+    color: white;
+    margin-bottom: 10px;
+}
