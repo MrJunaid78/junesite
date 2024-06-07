@@ -23,12 +23,13 @@ header {
 
 .holographic-text {
     font-family: 'Kingthings Spikeless', sans-serif;
-    font-size: 10vw;
+    font-size: 7vw;
     background: linear-gradient(45deg, #4acfd9, #e289f2, #7055f5);
     background-size: 200% 200%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: holographic 5s infinite;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Added text shadow */
 }
 
 @keyframes holographic {
@@ -45,11 +46,22 @@ header {
 
 .text-container {
     text-align: center;
-    margin-top: 10vh; /* Adjusted margin */
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+}
+
+#countdown, #snvr {
+    font-family: 'Kingthings Spikeless', sans-serif;
+    color: white;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Added text shadow */
+}
+
+#snvr {
+    font-size: 10vw;
 }
 
 .email-container {
-    margin-bottom: 10vh; /* Adjusted margin */
+    margin-bottom: 2vh;
     text-align: center;
 }
 
@@ -61,7 +73,7 @@ header {
 #email {
     padding: 10px;
     margin-right: 10px;
-    border: 2px solid white;
+    border: 1px solid white;
     border-radius: 0;
     font-size: 1.5rem;
     background: transparent;
