@@ -4,7 +4,7 @@
 }
 
 body {
-    background: linear-gradient(135deg, #4acfd9, #e289f2, #7055f5);
+    background: #000; /* Set background to black */
     font-family: Arial, sans-serif;
     color: white;
     margin: 0;
@@ -23,13 +23,12 @@ header {
 
 .holographic-text {
     font-family: 'Kingthings Spikeless', sans-serif;
-    font-size: 7vw;
-    background: linear-gradient(45deg, #4acfd9, #e289f2, #7055f5);
+    font-size: calc(7vw + 5px); /* Set font size with a minimum increment */
+    background: linear-gradient(45deg, #ff00ff, #00ffff, #ff0000); /* More vibrant holographic colors */
     background-size: 200% 200%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: holographic 5s infinite;
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Added text shadow */
 }
 
 @keyframes holographic {
@@ -46,22 +45,21 @@ header {
 
 .text-container {
     text-align: center;
-    margin-top: 10vh;
-    margin-bottom: 5vh;
+    margin-top: 10vh; /* Adjusted margin-top */
+    margin-bottom: 5vh; /* Adjusted margin-bottom */
 }
 
 #countdown, #snvr {
     font-family: 'Kingthings Spikeless', sans-serif;
     color: white;
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Added text shadow */
-}
-
-#snvr {
-    font-size: 10vw;
+    margin-bottom: 2vh; /* Added margin between countdown and SNVR */
+    padding-left: 0; /* Remove left padding */
+    padding-right: 0; /* Remove right padding */
+    font-size: calc(7vw + 5px); /* Set font size with a minimum increment */
 }
 
 .email-container {
-    margin-bottom: 2vh;
+    margin-bottom: 5vh; /* Adjusted margin-bottom */
     text-align: center;
 }
 
@@ -73,7 +71,7 @@ header {
 #email {
     padding: 10px;
     margin-right: 10px;
-    border: 1px solid white;
+    border: 2px solid white;
     border-radius: 0;
     font-size: 1.5rem;
     background: transparent;
@@ -85,8 +83,18 @@ header {
     background-color: transparent;
     border: none;
     font-size: 1.5rem;
-    color: white;
+    color: transparent;
     cursor: pointer;
+    position: relative; /* Set position to relative */
+}
+
+#submit-button::before {
+    content: "\2713"; /* Unicode for check mark symbol */
+    position: absolute; /* Set position to absolute */
+    top: 50%; /* Center vertically */
+    left: 10px; /* Adjust position */
+    transform: translateY(-50%); /* Center vertically */
+    color: white; /* Set color */
 }
 
 #submit-button:hover {
